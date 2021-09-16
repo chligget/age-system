@@ -3677,6 +3677,13 @@
   font-weight: bold;
   font-style: italic;
 }
+@font-face {
+  font-family: "Dragon Age";
+  src: url("../resources/fonts/dragonage/nogard.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 #context-menu {
   width: fit-content;
 }
@@ -3686,7 +3693,7 @@
 }
 /*---- Font Override----*/
 body *:not(i) {
-  font-family: 'Roboto' !important;
+  font-family: 'Dragon Age' !important;
 }
 /*---------Background---------------------*/
 .window-app.sheet.char .window-content,

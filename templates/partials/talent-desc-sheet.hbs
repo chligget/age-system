@@ -1,0 +1,36 @@
+{{!-- Sheet Tab Navigation --}}
+
+<nav class="add-sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="main">{{localize "age-system.item.desc"}}</a>
+    <a class="item" data-tab="novice">{{localize "age-system.item.novice"}}</a>
+    <a class="item" data-tab="journeyman">{{localize "age-system.item.journeyman"}}</a>
+    <a class="item" data-tab="master">{{localize "age-system.item.master"}}</a>
+    <a class="item" data-tab="bonus">{{localize "age-system.itemMod"}}</a>
+</nav>
+
+<section class="sheet-tab-section">
+    {{!-- Main Tab --}}
+    <div class="item-card-desc tab main" data-group="primary" data-tab="main">
+        {{editor content=data.data.longDesc target="data.longDesc" button=true owner=owner editable=true}}
+    </div>
+
+    {{!-- Novice Tab --}}
+    <div class="item-card-desc tab novice" data-group="primary" data-tab="novice">
+        {{editor content=data.data.noviceDesc target="data.noviceDesc" button=true owner=owner editable=true}}
+    </div>
+
+    {{!-- Journeyman Tab --}}
+    <div class="item-card-desc tab journeyman" data-group="primary" data-tab="journeyman">
+        {{editor content=data.data.journeymanDesc target="data.journeymanDesc" button=true owner=owner editable=true}}
+    </div>
+
+    {{!-- Master Tab --}}
+    <div class="item-card-desc tab master" data-group="primary" data-tab="master">
+        {{editor content=data.data.masterDesc target="data.masterDesc" button=true owner=owner editable=true}}
+    </div>
+    
+    {{!-- Bonuses Tab --}}
+    <div class="item-card-desc tab bonus" data-group="primary" data-tab="bonus">
+        {{> "systems/age-system/templates/partials/bonuses-sheet.hbs"}}
+    </div>
+</section>

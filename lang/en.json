@@ -25,8 +25,8 @@
     "SETTINGS.useConditions": "Use Conditions",
     "SETTINGS.useConditionsHint": "Shows a Conditions section - actual modifiers on rolls are not implemented",
 
-    "SETTINGS.usePowerPoints": "Use Power Points",
-    "SETTINGS.usePowerPointsHint": "Enable Power Points block and support for Power & Arcana Power Points settings",
+    "SETTINGS.usePowerPoints": "Use Mana Points",
+    "SETTINGS.usePowerPointsHint": "Enable Mana Points block and support for Power & Arcana Power Points settings",
 
     "SETTINGS.useToughness": "Use Toughness",
     "SETTINGS.useToughnessHint": "Check if the game will use Toughness statistics",
@@ -396,8 +396,8 @@
         "exhausted": "Exhausted",
         "dying": "Dying",
 
-        "powerPoints": "Power Points",
-        "powerPointsIndex": "PP",
+        "powerPoints": "Mana Points",
+        "powerPointsIndex": "Mana",
         "name": "Name",
         "features": "Distinctive Features",
         "toughness": "Toughness",
@@ -493,8 +493,8 @@
             "allOutAtkMnv": "All-Out Attack Damage",
             "maxHealth": "Max Health/Fortune",
             "maxConviction": "Max Conviction",
-            "maxPowerPoints": "Max PP",
-            "powerForce": "Power Force",
+            "maxPowerPoints": "Max MP",
+            "powerForce": "Spellpower",
             "aimMnv": "Aim",
             "armorPenalty": "Armor Penalty",
             "speed": "Speed",
@@ -520,12 +520,15 @@
             "quantity": "Quantity",
             "reload": "Reload Time",
             "capacity": "Capacity",
-            "equiped": "Equiped",
+            "equiped": "Equipped",
             "minStr": "Min STR",
             "cast": "Cast",
             "force": "Force",
             "resistedEffect": "Resisted Effect",
-            "testResist": "Resist Test"
+            "testResist": "Resist Test",
+            "novice": "Novice",
+            "journeyman": "Journeyman",
+            "master":  "Master"
         },
         "incQtd": "Increase Quantity",
         "decQtd": "Decrease Quantity",
@@ -547,7 +550,7 @@
         "cancel": "Cancel",
 
         "setAgeRollMod": "Roll Modifier",
-        "setAgeRollAtkDmgTradeOff": "Attack to Damage Trade Off",
+        "setAgeRollAtkDmgTradeOff": "Expert Strike",
         "setAgeRollTN": "Roll TN",
 
         "damageOptions": "Damage Roll Options",

@@ -41,6 +41,7 @@ async function preloadHandlebarsTemplates() {
         `${path}item-image-sheet-card.hbs`,
         `${path}item-options-sheet.hbs`,
         `${path}play-aid-bar.hbs`,
+        `${path}talent-desc-sheet.hbs`,
     ];
 
     return loadTemplates(templatePaths);

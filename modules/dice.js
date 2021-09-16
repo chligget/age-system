@@ -35,7 +35,7 @@ export async function ageRollCheck({
         if (extraOptions.rollTN) rollTN = extraOptions.rollTN;
         if (extraOptions.selectedAbl) abl = extraOptions.selectedAbl;
         rollUserMod = extraOptions.ageRollMod;
-        atkDmgTradeOff = -Math.abs(Number(extraOptions.atkDmgTradeOff));
+        atkDmgTradeOff = -(Number(extraOptions.atkDmgTradeOff));
     };
 
     // Set roll mode
@@ -715,7 +715,7 @@ export async function itemDamage({
         // Check if Attack to Damage Trade Off is applied
         if (atkDmgTradeOff) {
             damageFormula = `${damageFormula} + @atkDmgTradeOff[${game.i18n.localize("age-system.penaltyToDamage")}]`;
-            rollData.atkDmgTradeOff = Math.abs(atkDmgTradeOff);
+            rollData.atkDmgTradeOff = -(atkDmgTradeOff);
         }
 
         // Check if Focus adds to damage and adds it

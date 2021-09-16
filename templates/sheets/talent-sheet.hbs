@@ -16,9 +16,24 @@
                 <div class="flexcol">
                     <label>{{localize "age-system.talentDegree"}}</label>
                     {{#if inChat}}
-                    <div class="data-input">{{data.data.shortDesc}}</div>
+                    {{!-- <div class="data-input">{{data.data.shortDesc}}</div> --}}
+                        {{#if data.data.isMaster}}
+                            <div class="data-input">{{localize "age-system.item.master"}}</div>                    
+                        {{else if data.data.isJourneyman}}
+                            <div class="data-input">{{localize "age-system.item.journeyman"}}</div>
+                        {{else if data.data.isNovice}}
+                            <div class="data-input">{{localize "age-system.item.novice"}}</div>
+                        {{/if}}
                     {{else}}
-                    <input type="text" name="data.shortDesc" value="{{data.data.shortDesc}}" placeholder="{{localize "age-system.talentDegree"}}" />
+                    {{!-- <input type="text" name="data.shortDesc" value="{{data.data.shortDesc}}" placeholder="{{localize "age-system.talentDegree"}}" /> --}}
+                        <div class="flexrow">
+                            <input type="checkbox" name="data.isNovice" {{checked data.data.isNovice}} />
+                            <label>{{localize "age-system.item.novice"}}</label>
+                            <input type="checkbox" name="data.isJourneyman" {{checked data.data.isJourneyman}} />
+                            <label>{{localize "age-system.item.journeyman"}}</label>
+                            <input type="checkbox" name="data.isMaster" {{checked data.data.isMaster}} />
+                            <label>{{localize "age-system.item.master"}}</label>
+                        </div>
                     {{/if}}
                 </div>
             </div>
@@ -30,8 +45,20 @@
             {{#if inChat}}
             {{!-- Description --}}
             <div class="item-card-desc">
-                <label>{{localize "age-system.item.desc"}}</label>
-                {{editor content=data.data.longDesc target="data.longDesc" button=true owner=owner editable=true}}
+                {{!-- <label>{{localize "age-system.item.desc"}}</label>
+                {{editor content=data.data.longDesc target="data.longDesc" button=true owner=owner editable=true}} --}}
+                {{#if data.data.isNovice}}
+                    <label>{{localize "age-system.item.novice"}}</label>
+                    {{editor content=data.data.noviceDesc target="data.noviceDesc" button=true owner=owner editable=true}}
+                {{/if}}
+                {{#if data.data.isJourneyman}}
+                    <label>{{localize "age-system.item.journeyman"}}</label>
+                    {{editor content=data.data.journeymanDesc target="data.journeymanDesc" button=true owner=owner editable=true}}
+                {{/if}}
+                {{#if data.data.isMaster}}
+                    <label>{{localize "age-system.item.master"}}</label>
+                    {{editor content=data.data.masterDesc target="data.masterDesc" button=true owner=owner editable=true}}
+                {{/if}}
             </div>
             {{/if}}
 
@@ -40,7 +67,8 @@
         {{#if inChat}}
         {{else}}
         {{!-- Tab Control --}}
-        {{> "systems/age-system/templates/partials/bonus-desc-sheet.hbs"}}
+        {{!-- {{> "systems/age-system/templates/partials/bonus-desc-sheet.hbs"}} --}}
+        {{> "systems/age-system/templates/partials/talent-desc-sheet.hbs"}}
         {{/if}}
 
     </div>

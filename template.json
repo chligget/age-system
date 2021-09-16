@@ -349,6 +349,18 @@
                 "shortDesc": "",
                 "longDesc": ""
             },
+            "novice": {
+                "noviceDesc": "",
+                "isNovice": false
+                },
+            "journeyman": {
+                "journeymanDesc": "",
+                "isJourneyman": false
+            },
+            "master": {
+                "masterDesc": "",
+                "isMaster": false
+            },
             "bonuses": {
                 "itemMods": {
                     "itemDamage": {
@@ -568,7 +580,7 @@
             }
         },
         "talent": {
-            "templates": ["description", "bonuses"],
+            "templates": ["description", "novice", "journeyman", "master", "bonuses"],
             "activate": false
         },
         "stunts": {
