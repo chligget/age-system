@@ -3692,7 +3692,7 @@
   text-align: left;
 }
 /*---- Font Override----*/
-body *:not(i) {
+body *:not(i, .fas) {
   font-family: 'Dragon Age' !important;
 }
 /*---------Background---------------------*/
